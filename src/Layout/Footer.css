@@ -1,0 +1,109 @@
+:root {
+  --bg-color: #eef2f6;                    /* Light sky gray-blue */
+  --text-color: #1e1e2f;                  /* Deep slate gray for contrast */
+  --secondary-text: #000000;              /* Steel gray for less emphasis */
+  --accent-primary: #82c5e4;              /* Bright azure blue */
+  --accent-secondary: #f94f6d;            /* Vivid rose red */
+  --highlight-color: #f6c90e;             /* Warm amber/gold */
+  --surface-color: #f8f9fb;               /* Very light cool gray */
+  --hover-color: #00cfc8;                 /* Aqua teal pop */
+
+  /* Existing Hero Gradient */
+  --hero-gradient: linear-gradient(135deg, #3f8efc, #845ef7);
+
+  /* New Gradients */
+  --gradient-peach-mango: linear-gradient(135deg, #ffd194, #ff70a6);           /* Peach to pink */
+  --gradient-night-sky: linear-gradient(135deg, #1e3c72, #2a5298);             /* Deep cool blues */
+  --gradient-mint-glow: linear-gradient(135deg, #00cfc8, #a0ffe6);             /* Aqua to mint */
+  --gradient-royal-sunset: linear-gradient(135deg, #fa709a, #fee140);          /* Pinkish orange to gold */
+
+  --font-header: 'Poppins', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+/* Base Footer Styles */
+.footer-glass {
+  background: var(--surface-color) !important;
+  color: var(--text-color) !important;
+  font-family: var(--font-body) !important;
+  border-top: 2px solid var(--accent-primary) !important;
+  box-shadow: 0 -2px 20px rgba(0, 207, 200, 0.1) !important;
+}
+
+/* Footer Titles */
+.footer-title {
+  font-family: var(--font-header) !important;
+  font-weight: 700 !important;
+  color: var(--accent-primary) !important;
+}
+
+.footer-text {
+  color: var(--secondary-text) !important;
+  font-size: 0.95rem !important;
+  line-height: 1.6 !important;
+}
+
+/* Footer Links */
+.footer-link {
+  display: inline-block !important;
+  color: var(--text-color) !important;
+  text-decoration: none !important;
+  transition: color 0.3s ease !important;
+  font-weight: 500 !important;
+}
+
+.footer-link:hover {
+  color: var(--hover-color) !important;
+  text-decoration: underline !important;
+}
+
+/* Section Divider */
+.footer-divider {
+  border-top: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Icon Styling */
+.footer-icons a {
+  color: var(--text-color) !important;
+  font-size: 1.2rem !important;
+  transition: transform 0.3s ease, color 0.3s ease !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 8px !important;
+  border-radius: 50% !important;
+  background: transparent !important;
+}
+
+.footer-icons a:hover {
+  color: var(--accent-secondary) !important;
+  transform: scale(1.2) rotate(5deg) !important;
+  background: var(--hover-color) !important;
+  box-shadow: 0 0 10px var(--hover-color) !important;
+}
+
+/* Image-based Icons (PPH, Toptal, etc.) */
+.footer-icons a img {
+  width: 20px !important;
+  height: 20px !important;
+  object-fit: contain !important;
+  filter: brightness(0) invert(1) !important;
+  transition: transform 0.3s ease, filter 0.3s ease !important;
+}
+
+.footer-icons a:hover img {
+  transform: scale(1.25) rotate(-5deg) !important;
+  filter: brightness(1.2) !important;
+}
+
+/* Responsive Fixes */
+@media (max-width: 768px) {
+  .footer-icons {
+    justify-content: center !important;
+    flex-wrap: wrap !important;
+  }
+
+  .footer-icons a {
+    margin: 4px !important;
+  }
+}

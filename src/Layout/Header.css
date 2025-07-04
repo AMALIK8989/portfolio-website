@@ -1,0 +1,143 @@
+:root {
+  --bg-color: #eef2f6;                    /* Light sky gray-blue */
+  --text-color: #1e1e2f;                  /* Deep slate gray for contrast */
+  --secondary-text: #000000;              /* Steel gray for less emphasis */
+  --accent-primary: #82c5e4;              /* Bright azure blue */
+  --accent-secondary: #f94f6d;            /* Vivid rose red */
+  --highlight-color: #f6c90e;             /* Warm amber/gold */
+  --surface-color: #f8f9fb;               /* Very light cool gray */
+  --hover-color: #00cfc8;                 /* Aqua teal pop */
+  --hero-gradient: linear-gradient(135deg, #3f8efc, #845ef7);
+
+  --font-header: 'Poppins', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+body {
+  width: 100vw !important;
+  margin: 0 !important;
+  font-family: var(--font-body) !important;
+  background-color: var(--bg-color) !important;
+  color: var(--text-color) !important;
+  overflow-x: hidden !important;
+}
+
+/* ========== HEADER BASE ========== */
+header {
+  background-color: var(--bg-color) !important;
+  padding-top: 70px !important; /* offset for fixed navbar */
+  font-family: var(--font-body) !important;
+  width: 100% !important;
+}
+
+/* ========== NAVBAR ========== */
+.navbar {
+  background-color: #fff !important;
+  font-family: var(--font-header) !important;
+}
+
+.navbar-brand {
+  color: var(--accent-primary) !important;
+  font-weight: 700 !important;
+  font-size: 1.5rem !important;
+}
+
+.navbar-nav .nav-link {
+  color: var(--text-color) !important;
+  font-weight: 500 !important;
+  transition: all 0.3s ease !important;
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--accent-secondary) !important;
+}
+
+.navbar-nav .btn-primary {
+  background-color: var(--accent-primary) !important;
+  border: none !important;
+  font-weight: 600 !important;
+  transition: all 0.3s ease !important;
+  color: #fff !important;
+}
+
+.navbar-nav .btn-primary:hover {
+  background-color: var(--hover-color) !important;
+}
+
+/* ========== HERO SECTION ========== */
+.hero {
+  min-height: 100vh !important;
+  padding-top: 2rem !important;
+  padding-bottom: 2rem !important;
+  display: flex !important;
+  align-items: center !important;
+  background: var(--hero-gradient) !important;
+}
+
+.hero h1 {
+  font-family: var(--font-header) !important;
+  font-size: 2.5rem !important;
+  color: var(--accent-primary) !important;
+  margin-bottom: 1rem !important;
+}
+
+.hero p {
+  font-size: 1.1rem !important;
+  color: var(--secondary-text) !important;
+  line-height: 1.7 !important;
+  margin-top: 1rem !important;
+}
+
+.hero .btn-outline-primary {
+  border-color: var(--accent-primary) !important;
+  color: var(--accent-primary) !important;
+  font-weight: 500 !important;
+  transition: all 0.3s ease !important;
+  margin-top: 1.5rem !important;
+}
+
+.hero .btn-outline-primary:hover {
+  background-color: var(--accent-primary) !important;
+  color: #fff !important;
+}
+
+/* ========== SWIPER STYLING ========== */
+.hero-swiper {
+  width: 100% !important;
+}
+
+.hero-swiper img {
+  max-height: 400px !important;
+  width: 100% !important;
+  object-fit: cover !important;
+  border-radius: 12px !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08) !important;
+  transition: transform 0.3s ease !important;
+}
+
+.hero-swiper img:hover {
+  transform: scale(1.02) !important;
+}
+.profile-img{
+  height: 680px !important;
+  width: 1550px !important;
+}
+/* ========== RESPONSIVE FIXES ========== */
+@media (max-width: 992px) {
+  .hero {
+    flex-direction: column !important;
+    text-align: center !important;
+  }
+
+  .hero h1 {
+    font-size: 2rem !important;
+  }
+
+  .hero p {
+    font-size: 1rem !important;
+  }
+
+  .hero-swiper {
+    margin-top: 2rem !important;
+  }
+}
