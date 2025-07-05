@@ -16,7 +16,152 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import 'swiper/css';
 
-
+const offers = [
+  {
+    name: "🚀 LaunchPad Lite",
+    features: [
+      "Single Landing Page",
+      "Contact Form Integration",
+      "Framer Motion / AOS Animations",
+      "Responsive Design",
+      "Delivery in 6–7 Days",
+    ],
+    price: "Rs. 6,500 / $55",
+  },
+  {
+    name: "💼 Business Pro Pack",
+    features: [
+      "Up to 5 Pages",
+      "Custom Forms (Newsletter, Quote, etc.)",
+      "Bootstrap & React UI",
+      "Basic SEO Setup",
+      "Delivery in 10 Days",
+    ],
+    price: "Rs. 14,000 / $120",
+  },
+  {
+    name: "📚 EduCore Site",
+    features: [
+      "Courses & Lesson Page",
+      "Student Login/Register",
+      "Quiz + Results Module",
+      "Admin Dashboard",
+      "Delivery in 12–14 Days",
+    ],
+    price: "Rs. 22,000 / $190",
+  },
+  {
+    name: "🛒 Ecom Standard",
+    features: [
+      "MERN / Angular / WordPress Store",
+      "Cart + Checkout Flow",
+      "User Auth & Profile",
+      "Stripe/PayPal Integration",
+      "Delivery in 14–16 Days",
+    ],
+    price: "Rs. 34,999 / $300",
+  },
+  {
+    name: "🧠 SaaS Starter Kit",
+    features: [
+      "Next.js / MERN Stack",
+      "RESTful API Ready",
+      "JWT Auth + Role Management",
+      "Billing UI (No Stripe yet)",
+      "Delivery in 18 Days",
+    ],
+    price: "Rs. 42,000 / $370",
+  },
+  {
+    name: "📊 Analytics Dashboard",
+    features: [
+      "Admin Dashboard (React / Angular)",
+      "Table Filtering + Charts.js",
+      "Dark Mode Support",
+      "User Login & Roles",
+      "Delivery in 10–12 Days",
+    ],
+    price: "Rs. 29,000 / $250",
+  },
+  {
+    name: "🎨 Custom CMS",
+    features: [
+      "Laravel / React / MongoDB / Firebase",
+      "Dynamic Content Manager",
+      "Image & Media Upload",
+      "Admin with Permissions",
+      "Delivery in 14–18 Days",
+    ],
+    price: "Rs. 25,500 / $220",
+  },
+  {
+    name: "🌐 NGO Web Starter",
+    features: [
+      "Donation Form (PayPal / Razorpay)",
+      "Cause/Event Manager",
+      "Newsletter Signup",
+      "Mobile Optimized",
+      "Delivery in 7–10 Days",
+    ],
+    price: "Rs. 13,000 / $110",
+  },
+  {
+    name: "⚙️ DevTool Landing",
+    features: [
+      "Modern Hero with Code Animation",
+      "Tech Startup Feel",
+      "Open Source CTA Flow",
+      "Optional Blog Integration",
+      "Delivery in 6–8 Days",
+    ],
+    price: "Rs. 18,500 / $160",
+  },
+  {
+    name: "📰 Blog+Portfolio Duo",
+    features: [
+      "Markdown Blog (React/Next.js)",
+      "Portfolio Grid with Filters",
+      "Dark / Light Mode Toggle",
+      "Email Subscription Setup",
+      "Delivery in 5–7 Days",
+    ],
+    price: "Rs. 11,999 / $100",
+  },
+  {
+    name: "📱 PWA Mini App",
+    features: [
+      "React / Next.js PWA Setup",
+      "Offline Support",
+      "Custom Icons & Splash",
+      "Can Be Installed on Mobile",
+      "Delivery in 7–9 Days",
+    ],
+    price: "Rs. 20,000 / $175",
+  },
+  {
+    name: "🧩 Plugin + Widget Dev",
+    features: [
+      "Custom React / JS Plugin",
+      "Embeddable Script Code",
+      "Integrates with CMS or static site",
+      "One Revision Included",
+      "Delivery in 4–6 Days",
+    ],
+    price: "Rs. 9,999 / $90",
+  },
+];
+const projectThumbs = [
+  { title: "Flickrift", img: "/projects/FlickRift.png" },
+  { title: "Doccure", img: "/projects/Doccure.png" },
+  { title: "Biostrips Health", img: "/projects/Biostrips Health.png" },
+  { title: "Ew Villa Medica", img: "/projects/Ew-Villa-Medica.png" },
+  { title: "Muush", img: "/projects/Muush.png" },
+  { title: "Nexonix", img: "/projects/Nexonix.png" },
+  { title: "Blacksheep Construction", img: "/projects/Blacksheep-Construction.png" },
+  { title: "Bitestation", img: "/projects/Bitestation.png" },
+  { title: "Nume Hair", img: "/projects/Nume-Hair.png" },
+  // { title: "Freelance CRM", img: "https://via.placeholder.com/300x200?text=CRM" },
+];
 const testimonials = [
   {
     name: "Sarah M.",
@@ -301,7 +446,7 @@ const Main = () => {
 
 
       {/* CLIENTS TICKER */}
-      <section className="clients-ticker py-4 bg-light" data-aos="fade-up">
+      {/* <section className="clients-ticker py-4 bg-light" data-aos="fade-up">
         <div className="container">
           <h3 className="text-center text-primary fw-bold mb-4">Trusted By</h3>
           <Swiper
@@ -333,7 +478,7 @@ const Main = () => {
             ))}
           </Swiper>
         </div>
-      </section>
+      </section> */}
 
      <section className="skills container py-5" id="skills" data-aos="fade-up">
       <h2 className="text-primary fw-bold mb-4 text-center">My Skills</h2>
@@ -668,6 +813,122 @@ const Main = () => {
         </div>
       </div>
     </section>
+     <section className="services container-fluid px-2 py-5" id="services">
+      <div className="container" data-aos="fade-up">
+        <h2 className="fw-bold text-primary text-center mb-4">💼 Services I Offer</h2>
+
+        {/* Primary Table */}
+        <div className="table-responsive mb-5">
+          <table className="table service-table text-center align-middle">
+            <thead className="table-dark">
+              <tr>
+                <th>🛠️ Service</th>
+                <th>Description</th>
+                <th>Price</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>🚀 Startup Landing Page</td>
+                <td>High-converting landing page with contact form, animations & mobile-first design</td>
+                <td>Rs. 8,999 / $80</td>
+              </tr>
+              <tr>
+                <td>🎨 Multi-page Website</td>
+                <td>Up to 5 pages, responsive, includes contact page, animations, and basic SEO</td>
+                <td>Rs. 14,999 / $130</td>
+              </tr>
+              <tr>
+                <td>📊 Dashboard / Admin Panel</td>
+                <td>Custom dashboards with charts, data tables, login system (MERN / Laravel / Firebase)</td>
+                <td>Rs. 24,999 / $220</td>
+              </tr>
+              <tr>
+                <td>⚙️ Custom CMS</td>
+                <td>Manage content dynamically, secured backend with roles (Laravel, Node.js or WordPress)</td>
+                <td>Rs. 19,999 / $180</td>
+              </tr>
+              <tr>
+                <td>🛍️ eCommerce Store</td>
+                <td>Fully functional store (MERN, Angular or WordPress), cart, login, payments</td>
+                <td>Rs. 34,999 / $300</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        {/* Tech Stack + Offer Text */}
+        <div className="row">
+          <div className="col-lg-10 mx-auto">
+            <h5 className="text-primary fw-bold mb-2">🧩 Technologies I Work With</h5>
+            <p className="text-secondary">
+              I build <strong>all types of websites</strong> — business, educational, non-profit, custom tools —
+              using <strong>HTML, CSS, JavaScript, PHP, SQL, Laravel, React, Node.js, Express, MongoDB, Firebase, Supabase, Angular, Next.js</strong> and more.
+              <br />
+              <br />
+              Need something custom like a CRM or complex web app? <a href="#contact" className="text-decoration-underline fw-bold text-primary">Let’s Talk</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+      <section className="custom-offers container-fluid px-2 py-5" id="custom-offers">
+      <div className="container" data-aos="fade-up">
+        <h2 className="fw-bold text-primary text-center mb-5">🛠️ Custom Offers</h2>
+
+        <div className="row g-4">
+          {offers.map((offer, index) => (
+            <div className="col-12 col-md-6" key={index} data-aos="fade-up" data-aos-delay={index * 100}>
+              <div className="offer-table-wrapper shadow-sm p-4 rounded-4">
+                <h5 className="fw-bold text-primary mb-3">{offer.name}</h5>
+                <table className="table table-borderless small">
+                  <tbody>
+                    {offer.features.map((feature, i) => (
+                      <tr key={i}>
+                        <td>✅{feature}</td>
+                      </tr>
+                    ))}
+                    <tr className="fw-bold">
+                      <td className="text-end pt-3">💰 {offer.price}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+     <section className="projects-carousel container-fluid px-2 py-5" id="projects-carousel" data-aos="fade-up">
+    <div className="container text-center">
+      <h2 className="fw-bold text-primary mb-4">10 Projects, 1 Dream</h2>
+      <Swiper
+        modules={[Autoplay, Pagination]}
+        autoplay={{ delay: 3000, disableOnInteraction: false }}
+        loop={true}
+        pagination={{ clickable: true }}
+        slidesPerView={1}
+        spaceBetween={20}
+        breakpoints={{
+          576: { slidesPerView: 2 },
+          768: { slidesPerView: 3 },
+          992: { slidesPerView: 4 }
+        }}
+      >
+        {projectThumbs.map((p, i) => (
+          <SwiperSlide key={i}>
+            <div className="project-slide">
+              <img src={p.img} alt={p.title} className="img-fluid rounded" />
+              <h6 className="mt-2 text-secondary">{p.title}</h6>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+      <p className="mt-4 text-secondary">
+        “These were all built for real people in Pakistan. Next one could be yours.”
+      </p>
+    </div>
+  </section>
     </main>
   );
 };

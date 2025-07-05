@@ -1,6 +1,6 @@
 :root {
   --bg-color: #eef2f6;                    /* Light sky gray-blue */
-  --text-color: #1e1e2f;                  /* Deep slate gray for contrast */
+  --text-color: #000000;                  /* Deep slate gray for contrast */
   --secondary-text: #000000;              /* Steel gray for less emphasis */
   --accent-primary: #82c5e4;              /* Bright azure blue */
   --accent-secondary: #f94f6d;            /* Vivid rose red */
@@ -23,87 +23,92 @@
 
 /* Base Footer Styles */
 .footer-glass {
-  background: var(--surface-color) !important;
-  color: var(--text-color) !important;
-  font-family: var(--font-body) !important;
-  border-top: 2px solid var(--accent-primary) !important;
-  box-shadow: 0 -2px 20px rgba(0, 207, 200, 0.1) !important;
+  background: url(/projects/back.jpg) no-repeat center center/cover;
+  color: #111 !important;
+  font-family: var(--font-body);
+  border-top: 2px solid var(--accent-primary);
+  box-shadow: 0 -2px 20px rgba(0, 0, 0, 0.05);
+  padding-top: 3rem;
+  padding-bottom: 2rem;
 }
 
-/* Footer Titles */
-.footer-title {
-  font-family: var(--font-header) !important;
-  font-weight: 700 !important;
-  color: var(--accent-primary) !important;
+/* Titles */
+.footer-title,
+.footer-glass h5 {
+  font-family: var(--font-header);
+  font-weight: 700;
+  color: #111 !important;
 }
 
-.footer-text {
-  color: var(--secondary-text) !important;
-  font-size: 0.95rem !important;
-  line-height: 1.6 !important;
+/* Text */
+.footer-text,
+.footer-glass p,
+.footer-glass small {
+  color: #444 !important;
+  font-size: 0.95rem;
+  line-height: 1.6;
 }
 
 /* Footer Links */
 .footer-link {
-  display: inline-block !important;
-  color: var(--text-color) !important;
-  text-decoration: none !important;
-  transition: color 0.3s ease !important;
-  font-weight: 500 !important;
+  display: inline-block;
+  color: #222;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-weight: 500;
 }
 
 .footer-link:hover {
-  color: var(--hover-color) !important;
-  text-decoration: underline !important;
+  color: var(--accent-primary);
+  text-decoration: underline;
 }
 
-/* Section Divider */
+/* Divider */
 .footer-divider {
-  border-top: 1px solid rgba(0, 0, 0, 0.1) !important;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-/* Icon Styling */
+/* Icon Section */
 .footer-icons a {
-  color: var(--text-color) !important;
-  font-size: 1.2rem !important;
-  transition: transform 0.3s ease, color 0.3s ease !important;
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  padding: 8px !important;
-  border-radius: 50% !important;
-  background: transparent !important;
+  color: #222;
+  font-size: 1.25rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  border-radius: 50%;
+  background: #f1f1f1;
 }
 
 .footer-icons a:hover {
-  color: var(--accent-secondary) !important;
-  transform: scale(1.2) rotate(5deg) !important;
-  background: var(--hover-color) !important;
-  box-shadow: 0 0 10px var(--hover-color) !important;
+  color: var(--accent-primary);
+  background: #eaeaea;
+  transform: scale(1.15);
 }
 
-/* Image-based Icons (PPH, Toptal, etc.) */
+/* Image-Based Icons (PPH, Toptal, etc.) */
 .footer-icons a img {
-  width: 20px !important;
-  height: 20px !important;
-  object-fit: contain !important;
-  filter: brightness(0) invert(1) !important;
-  transition: transform 0.3s ease, filter 0.3s ease !important;
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  filter: brightness(0); /* Black icons */
+  transition: all 0.3s ease;
 }
 
 .footer-icons a:hover img {
-  transform: scale(1.25) rotate(-5deg) !important;
-  filter: brightness(1.2) !important;
+  transform: scale(1.25) rotate(-3deg);
+  filter: brightness(0.2); /* Darker effect on hover */
 }
 
-/* Responsive Fixes */
+/* Responsive Tweaks */
 @media (max-width: 768px) {
   .footer-icons {
-    justify-content: center !important;
-    flex-wrap: wrap !important;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 
   .footer-icons a {
-    margin: 4px !important;
+    margin: 4px;
   }
 }
