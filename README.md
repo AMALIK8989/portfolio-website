@@ -1,6 +1,6 @@
 
 
-```markdown
+
 # 🧠 Atta e Rabi — Developer Portfolio
 
 A modern, responsive portfolio website built with 💻 **React**, 🎨 **Bootstrap 5**, ⚡ **AOS (Animate On Scroll)**, and 🚀 **SwiperJS**.  
@@ -27,7 +27,7 @@ It showcases my frontend skills, client testimonials, services, real-world proje
 ## 📁 Project Structure
 
 ```
-
+```markdown
 📦 my-portfolio
 ├── 📁 public
 │   └── atta-e-rabi.png (and other public assets)
@@ -43,7 +43,7 @@ It showcases my frontend skills, client testimonials, services, real-world proje
 ├── package.json
 └── README.md
 
-````
+```
 
 ---
 
@@ -128,4 +128,3 @@ MIT License. Feel free to use, adapt, and improve this template for your own por
 
 ### “Built for real people. Next one could be you.” 💥
 
-```
